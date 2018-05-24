@@ -1,0 +1,78 @@
+<!--
+  Generated template for the FoodPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>food</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label>การออกกำลังกาย</ion-label>
+          <ion-select [(ngModel)]="tot">
+            <ion-option value="1">ออกกำลังกายน้อยมากหรือไม่ออกเลย</ion-option>
+            <ion-option value="2">ออกกำลังกาย 1-3 ครั้ง ต่อสัปดาห์</ion-option>
+            <ion-option value="3">ออกกำลังกาย 4-5 ครั้ง ต่อสัปดาห์</ion-option>
+            <ion-option value="4">ออกกำลังกาย 6-7 ครั้ง ต่อสัปดาห์</ion-option>
+            <ion-option value="5">ออกกำลังกายวันละ 2 ครั้งขึ้นไป</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-card-content>
+            <p>สำหรับผู้ชาย</p>
+          </ion-card-content>
+        <ion-item>
+            <ion-input type="text" placeholder="น้ำหนัก(kg)" [(ngModel)]="weight"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input type="text" placeholder="ส่วนสูง(cm)" [(ngModel)]="height"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+              <ion-input type="text" placeholder="อายุ(year)" [(ngModel)]="age"></ion-input>
+            </ion-item>
+    
+          <div padding>
+            <button ion-button block color="secondary" (click)="calBmrx()">ตกลง</button>
+          </div>
+          <ion-card>
+              <ion-card-header>
+               <ion-icon name="" color="primary"></ion-icon> ค่าที่ได้ 
+               <ion-badge >{{foodx |number:'1.2-2'}}</ion-badge>
+              </ion-card-header>
+             
+            </ion-card>
+            <ion-card-content>
+                <p>สำหรับหญิง</p>
+              </ion-card-content>
+            <ion-item>
+                <ion-input type="text" placeholder="น้ำหนัก(kg)" [(ngModel)]="weight"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-input type="text" placeholder="ส่วนสูง(cm)" [(ngModel)]="height"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                  <ion-input type="text" placeholder="อายุ(year)" [(ngModel)]="age"></ion-input>
+                </ion-item>
+        
+              <div padding>
+                <button ion-button block color="secondary" (click)="calBmry()">ตกลง</button>
+              </div>
+              <ion-card>
+                  <ion-card-header>
+                   <ion-icon name="" color="primary"></ion-icon> ค่าที่ได้ 
+                   <ion-badge >{{foody |number:'1.2-2'}}</ion-badge>
+                  </ion-card-header>
+                 
+                </ion-card>
+</ion-content>
